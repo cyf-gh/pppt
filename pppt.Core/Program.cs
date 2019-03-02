@@ -9,7 +9,7 @@ using System.Text;
 namespace pppt.Core {
     public class PPPT {
         static string _Title = Guid.NewGuid().ToString();
-        static string _FilePath = File.ReadAllText( Path.Combine( "C:\\Bins\\pppt", "target.txt" ) ); // 存放位置
+        static string _FilePath = File.ReadAllText( Path.Combine( System.Windows.Forms.Application.StartupPath, "target.txt" ) ); // 存放位置
         /// <summary>
         /// 创建目标文件夹
         /// </summary>
@@ -24,7 +24,7 @@ namespace pppt.Core {
 
             // 读取打开该文件的程序路径
             try {
-                execPath = File.ReadAllText( Path.Combine( "C:\\Bins\\pppt", execFileName ) );
+                execPath = File.ReadAllText( Path.Combine( System.Windows.Forms.Application.StartupPath, execFileName ) );
             } catch {
                 return;
             }
