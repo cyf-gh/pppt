@@ -49,13 +49,13 @@ namespace pppt.Core {
                             }
                         }
 
-
+                        string _arg = "\""+ arg +"\"";
 
                         // 像往常一样启动应用
                         try {
-                            Process.Start( execPath, arg );
+                            Process.Start( execPath, _arg );
                         } catch {
-                            RunCmd2( execPath, arg ); // 备用方案
+                            RunCmd2( execPath, _arg ); // 备用方案
                         }
                     }
                 } catch {
